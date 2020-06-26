@@ -24,6 +24,19 @@ body {
   .right {
     float: right;
   }
+  .logout {
+    background-color: $color_dark;
+    border-radius: 4px;
+    width: 100px;
+    border: 1px solid $color_light;
+    color: $color_light;
+    padding: 6px;
+    position: relative;
+    top: 10px;
+  }
+  .username {
+    margin-left: 40px;
+  }
 }
 .error {
   position: absolute;
