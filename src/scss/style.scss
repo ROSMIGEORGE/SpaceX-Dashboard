@@ -1,0 +1,12 @@
+@import './general.scss';
+
+body{
+    margin: 0px;
+}
+.app{
+    font-family: $font;
+    background-color: $color_dark;
+    color: $color_light;
+    height: 100vh;
+    box-sizing: border-box;
+}
