@@ -21,6 +21,7 @@ const LoginForm = (props) => {
       />
       <div>
         <button type="submit">Submit</button>
+        <div className="error">{props.errormsg}</div>
       </div>
     </form>
   );
@@ -29,11 +30,32 @@ const LoginForm = (props) => {
 const renderInputField = ({ input, meta, placeholder, type }) => {
   return (
     <div>
-      <input {...input} placeholder={placeholder} type={type} />
+      <input
+        {...input}
+        placeholder={placeholder}
+        type={type}
+        autoComplete="off"
+      />
+      {renderError(meta)}
     </div>
   );
 };
 
+const renderError = ({ touched, error }) => {
+  return touched && error ? <div className="error">{error}</div> : null;
+};
+
+const validate = (formValues) => {
+  const errors = {};
+  if (!formValues.username) {
+    errors.username = "Enter username";
+  }
+  if (!formValues.password) {
+    errors.password = "Enter password";
+  }
+  return errors;
+};
 export default reduxForm({
   form: "loginForm",
+  validate,
 })(LoginForm);

@@ -9,7 +9,27 @@ body {
   color: $color_light;
   box-sizing: border-box;
 }
-
+.nav {
+  height: 50px;
+  box-shadow: $boxShadowOut;
+  box-sizing: border-box;
+  position: fixed;
+  width: 100%;
+  background-color: $color_dark;
+  line-height: 50px;
+  padding: 0px 15px;
+  .logo {
+    float: left;
+  }
+  .right {
+    float: right;
+  }
+}
+.error {
+  position: absolute;
+  font-size: 10px;
+  color: orangered;
+}
 .login {
   @include flex-center;
   .illustration,
