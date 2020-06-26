@@ -1,15 +1,21 @@
-import React from 'react';
-import LoginForm from './_LoginForm';
+import React from "react";
+import { connect } from "react-redux";
+import LoginForm from "./_LoginForm";
+import { authenticate } from "../actions";
 
-const LoginPage = props => {
-    return(
-        <div className="login">
-           <div></div>
-           <div>
-               <LoginForm/>
-           </div>
-        </div>
-    );
-}
+const LoginPage = (props) => {
+  const onSubmit = (formValues) => {
+    console.log(formValues);
+    props.authenticate(formValues);
+  };
+  return (
+    <div className="login">
+      <div className="illustration"></div>
+      <div className="form-section">
+        <LoginForm onSubmit={onSubmit} />
+      </div>
+    </div>
+  );
+};
 
-export default LoginPage;
+export default connect(null, { authenticate })(LoginPage);

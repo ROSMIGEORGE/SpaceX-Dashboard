@@ -1,12 +1,32 @@
-@import './general.scss';
+@import "./general.scss";
 
-body{
-    margin: 0px;
+body {
+  margin: 0px;
 }
-.app{
-    font-family: $font;
-    background-color: $color_dark;
-    color: $color_light;
+.app {
+  font-family: $font;
+  background-color: $color_dark;
+  color: $color_light;
+  box-sizing: border-box;
+}
+
+.login {
+  @include flex-center;
+  .illustration,
+  .form-section {
+    width: 50%;
     height: 100vh;
-    box-sizing: border-box;
+    @include flex-center;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .login {
+    flex-direction: column;
+    .illustration,
+    .form-section {
+      width: 100%;
+      height: 50vh;
+    }
+  }
 }

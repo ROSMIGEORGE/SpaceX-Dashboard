@@ -1,18 +1,37 @@
-@import './general.scss';
+@import "./general.scss";
 
-.form{
+.form {
+  box-sizing: border-box;
+  padding: 50px 25px;
+  text-align: center;
+  box-shadow: $boxShadowOut;
+  width: 300px;
+  height: 300px;
+  input {
+    border: none;
+    border-bottom: 1px solid $color_light;
+    background-color: $color_dark;
+    padding: 10px;
+    margin: 10px 0px;
+    width: 100%;
     box-sizing: border-box;
-    padding: 15px;
+    outline: none;
     text-align: center;
+    color: $color_light;
+  }
+  button {
+    width: 100%;
+    background-color: $color_light;
+    box-sizing: border-box;
+    border: unset;
+    padding: 10px;
+    margin: 30px 0px;
     box-shadow: $boxShadowOut;
-    width: 300px;
-    input{
-        border: none;
-        border-bottom: 1px solid $color_light;
-        background-color: $color_dark;
-        padding: 10px;
-        margin: 10px 0px;
-        width: 100%;
-        position: relative;
+    border-radius: 4px;
+    outline: none;
+    &:hover {
+      cursor: pointer;
+      box-shadow: unset;
     }
+  }
 }
