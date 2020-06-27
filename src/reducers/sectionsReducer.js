@@ -1,5 +1,4 @@
 const INITVALUE = {
-  info: {},
   general: {
     history: { title: "History", path: "/history" },
     launches: { title: "Launches", path: "/launches" },
@@ -15,6 +14,15 @@ const INITVALUE = {
     rocket: { title: "Rockets", path: "/rockets" },
     roadster: { title: "Roadster", path: "/roadster" },
     ships: { title: "Ships", path: "/ships" },
+  },
+  userDB: {
+    cards: {
+      history: { title: "History", path: "/history" },
+      missions: { title: "Missions", path: "/missions" },
+      launches: { title: "Launches", path: "/launches" },
+      lanchPad: { title: "Launch pad", path: "/launch-pad" },
+      LandingPad: { title: "Landing pad", path: "/landing-pad" },
+    },
   },
 };
 

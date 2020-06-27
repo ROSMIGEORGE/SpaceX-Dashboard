@@ -11,3 +11,36 @@ $boxShadowOut: -3px -3px 3px rgba(255, 255, 255, 0.05),
   justify-content: center;
   align-items: center;
 }
+
+@mixin round_button {
+  background-color: $color_dark;
+  color: $color_light;
+  height: 50px;
+  width: 50px;
+  margin-top: 10px;
+  border-radius: 50%;
+  border: 1px solid grey;
+  box-sizing: border-box;
+  outline: none;
+  &:hover {
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+  }
+}
+@keyframes slide-up {
+  from {
+    top: 1000px;
+  }
+  to {
+    top: 0px;
+  }
+}
+
+@keyframes slide-down {
+  from {
+    top: 0px;
+  }
+  to {
+    top: 1000px;
+  }
+}

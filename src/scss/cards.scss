@@ -1,0 +1,34 @@
+@import "./general.scss";
+
+.card-container {
+  @include flex_center;
+  box-shadow: $boxShadowOut;
+  width: 100%;
+  margin-top: 20px;
+  box-sizing: border-box;
+  padding: 18px;
+  .card {
+    box-shadow: $boxShadowOut;
+    height: 150px;
+    width: 200px;
+    margin: 0px 10px;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 20px;
+    .head {
+      font-weight: 600;
+      font-size: 18px;
+      text-transform: uppercase;
+      margin: 10px 0px;
+    }
+    .arrow-btn {
+      @include round_button;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .card-container {
+    flex-direction: column;
+  }
+}

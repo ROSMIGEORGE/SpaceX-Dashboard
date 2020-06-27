@@ -19,45 +19,55 @@ const InfoCard = (props) => {
       <div className="title">ABOUT US</div>
       <div className="general-info">
         <div className="item">
-          <span>Company: </span>
+          <span>Company</span>
+          <span>:</span>
           {name}
         </div>
         <div className="item">
-          <span>Founder: </span>
+          <span>Founder</span>
+          <span>:</span>
           {founder}
         </div>
         <div className="item">
-          <span>Year: </span>
+          <span>Year</span>
+          <span>:</span>
           {founded}
         </div>
         <div className="item">
-          <span>HeadQuarters: </span>
+          <span>HeadQuarters</span>
+          <span>:</span>
           {`${headquarters.city} ${headquarters.state}`}
         </div>
         <div className="item">
-          <span>Employees: </span>
+          <span>Employees</span>
+          <span>:</span>
           {employees}
         </div>
       </div>
       <div className="company-info">
         <div className="item">
-          <span>Launch sites: </span>
+          <span>Launch sites</span>
+          <span>:</span>
           {launch_sites}
         </div>
         <div className="item">
-          <span>Test sites: </span>
+          <span>Test sites</span>
+          <span>:</span>
           {test_sites}
         </div>
         <div className="item">
-          <span>Vechicles: </span>
+          <span>Vechicles</span>
+          <span>:</span>
           {vehicles}
         </div>
         <div className="item">
-          <span>valuation: </span>
+          <span>valuation</span>
+          <span>:</span>
           {valuation}
         </div>
         <div className="item">
-          <span>Website: </span>
+          <span>Website</span>
+          <span>:</span>
           {links.website}
         </div>
       </div>

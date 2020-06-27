@@ -1,0 +1,26 @@
+@import "./general.scss";
+
+.modal {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  min-height: 100vh;
+  background-color: $color_dark;
+  animation: slide-up 1s;
+  box-sizing: border-box;
+  padding: 20px;
+}
+.hide {
+  top: 1000px;
+  animation: slide-down 1s;
+}
+.close-btn {
+  position: absolute;
+  right: 20px;
+  @include round_button;
+  svg {
+    position: absolute;
+    top: 12px;
+    left: 11px;
+  }
+}
