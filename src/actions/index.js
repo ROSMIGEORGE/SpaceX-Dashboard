@@ -21,21 +21,24 @@ import {
 } from "../reducers/types";
 
 export const authenticate = (formValues) => async (dispatch, getState) => {
-  const response = await login.post("", { ...formValues });
+  const requestOptions = {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ ...formValues }),
+  };
+  const response = await fetch(`/users/authenticate`, requestOptions);
 
-  const data = response.data;
-  if ((data.status = "authenticated")) {
+  if (response.ok) {
     dispatch({
       type: START_SESSION,
-      payload: { ...data, error: "", isLoggedIn: true },
+      payload: { ...response.data, error: "", isLoggedIn: true },
     });
     history.push("/dashboard");
   } else {
     dispatch({
       type: AUTH_FAILED,
       payload: {
-        status: "fail",
-        error: "Invalid username or password",
+        error: response.error.message,
         isLoggedIn: false,
       },
     });
