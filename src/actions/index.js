@@ -1,5 +1,5 @@
 import spacexdata from "../apis/spacexdata";
-import history from "../history";
+import history from "../_helpers/history";
 import {
   START_SESSION,
   AUTH_FAILED,

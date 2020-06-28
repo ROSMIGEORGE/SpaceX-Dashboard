@@ -1,6 +1,6 @@
 import React from "react";
 import { ArrowDownward } from "@material-ui/icons";
-import hashHistory from "../hashHistory";
+import hashHistory from "../_helpers/hashHistory";
 
 const CardItem = ({ card }) => {
   return (

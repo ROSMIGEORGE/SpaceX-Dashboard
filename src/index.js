@@ -6,8 +6,8 @@ import thunk from "redux-thunk";
 import { Provider } from "react-redux";
 import reducers from "./reducers";
 import App from "./components/App";
-import { loadState, saveState } from "./sessionStorage";
-import { configureFakeBackend } from "./fake_api";
+import { loadState, saveState } from "./_helpers/sessionStorage";
+import { configureFakeBackend } from "./_helpers/fake_api";
 
 configureFakeBackend();
 let persistedState = loadState();

@@ -1,11 +1,11 @@
 import React from "react";
 import { connect } from "react-redux";
-import history from "../history";
+import history from "../_helpers/history";
 import "../scss/dashboard.scss";
 import AdminDB from "./AdminDB";
 import UserDB from "./UserDB";
 import { Router, Route, Switch } from "react-router-dom";
-import hashHistory from "../hashHistory";
+import hashHistory from "../_helpers/hashHistory";
 import HistoryPage from "./cards/History";
 import Missions from "./cards/Missions";
 import Launches from "./cards/Launches";

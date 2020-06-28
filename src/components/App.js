@@ -1,7 +1,7 @@
 import React from "react";
 import { Router, Route, Switch } from "react-router-dom";
 import "../scss/style.scss";
-import history from "../history";
+import history from "../_helpers/history";
 import LoginPage from "./LoginPage";
 import Dashboard from "./Dashboard";
 import Navbar from "./Navbar";
