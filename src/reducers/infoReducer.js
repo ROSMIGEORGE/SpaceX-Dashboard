@@ -1,6 +1,6 @@
 import { INFO } from "../reducers/types";
 
-export default (state = {}, action) => {
+export default (state = null, action) => {
   switch (action.type) {
     case INFO:
       return action.payload;

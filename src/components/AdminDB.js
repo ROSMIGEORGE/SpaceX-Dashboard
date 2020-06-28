@@ -3,7 +3,6 @@ import { connect } from "react-redux";
 import CardContainer from "./CardContainer";
 
 const AdminDB = (props) => {
-  console.log(props);
   return (
     <div className="admin-db">
       <div className="card-title">MACHINES</div>

@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Close } from "@material-ui/icons";
 import hashHistory from "../hashHistory";
 import "../scss/cardPages.scss";
 
 const CardHOC = (CardsSection, compProps) => {
-  const Section = (props) => {
+  const Section = () => {
     const [classList, setClassList] = useState("modal");
 
     const closeModal = () => {

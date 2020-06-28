@@ -1,15 +1,13 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { connect } from "react-redux";
 import { fetchLaunchpads } from "../../actions";
 import "../../scss/cardPages.scss";
 import CardHOC from "../CardHOC";
 
 const LaunchPad = (props) => {
-  useEffect(() => {
-    if (!props.items.length) {
-      props.fetchLaunchpads();
-    }
-  }, []);
+  if (!props.items.length) {
+    props.fetchLaunchpads();
+  }
 
   return (
     <React.Fragment>

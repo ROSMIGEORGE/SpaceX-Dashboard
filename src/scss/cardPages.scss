@@ -34,6 +34,8 @@
       text-align: left;
       overflow: auto;
       height: unset;
+      padding: 20px;
+      box-sizing: border-box;
       .sub-head {
         font-size: 20px;
         font-weight: 600;
@@ -44,9 +46,31 @@
         width: 100%;
         overflow: auto;
         margin-bottom: 5px;
-        span {
+        box-sizing: border-box;
+        span,
+        .mission-title {
           font-size: 15px;
-          width: 150px;
+          width: 165px;
+          font-weight: 700;
+        }
+        .mission-wrapper {
+          padding: 10px;
+          box-sizing: border-box;
+          margin-left: 20px;
+          overflow: auto;
+          .mission {
+            padding: 10px;
+            margin: 10px;
+            float: left;
+            box-sizing: border-box;
+            box-shadow: $boxShadowOut;
+            font-size: 14px;
+            min-width: 150px;
+            span {
+              font-size: 14px;
+              width: 50px;
+            }
+          }
         }
       }
       .more {

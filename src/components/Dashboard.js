@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { connect } from "react-redux";
 import history from "../history";
 import "../scss/dashboard.scss";
@@ -11,17 +11,22 @@ import Missions from "./cards/Missions";
 import Launches from "./cards/Launches";
 import LaunchPad from "./cards/LaunchPad";
 import LandingPad from "./cards/LandingPad";
+import Capsules from "./cards/Capsule";
+import Cores from "./cards/Cores";
+import Dragons from "./cards/Dragons";
+import Payloads from "./cards/Payloads";
+import Rockets from "./cards/Rockets";
+import Roadster from "./cards/Roadster";
+import Ships from "./cards/Ships";
 
 const Dashboard = (props) => {
-  useEffect(() => {
-    if (!props.auth.isLoggedIn) {
-      history.push("/");
-    }
-  }, []);
-  console.log(props);
+  if (!props.auth.isLoggedIn) {
+    history.push("/");
+  }
+
   return (
     <div className="dashboard">
-      {props.auth.role == "Admin" ? <AdminDB /> : <UserDB />}
+      {props.auth.role === "Admin" ? <AdminDB /> : <UserDB />}
       <Router history={hashHistory} base>
         <Switch>
           <Route path="/history" exact component={HistoryPage} />
@@ -29,6 +34,13 @@ const Dashboard = (props) => {
           <Route path="/launches" exact component={Launches} />
           <Route path="/launch-pad" exact component={LaunchPad} />
           <Route path="/landing-pad" exact component={LandingPad} />
+          <Route path="/capsule" exact component={Capsules} />
+          <Route path="/cores" exact component={Cores} />
+          <Route path="/dragons" exact component={Dragons} />
+          <Route path="/payloads" exact component={Payloads} />
+          <Route path="/rockets" exact component={Rockets} />
+          <Route path="/roadster" exact component={Roadster} />
+          <Route path="/ships" exact component={Ships} />
         </Switch>
       </Router>
     </div>

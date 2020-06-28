@@ -1,6 +1,6 @@
 import { DRAGONS, END_SESSION } from "./types";
 
-export default (state = {}, action) => {
+export default (state = [], action) => {
   switch (action.type) {
     case DRAGONS:
       return action.payload;

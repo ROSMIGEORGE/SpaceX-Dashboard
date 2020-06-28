@@ -6,16 +6,18 @@ import rocket_star from "../images/rocket-star.png";
 
 const LoginPage = (props) => {
   useEffect(() => {
-    props.fetchInfo();
-  }, []);
+    if (!props.info) {
+      props.fetchInfo();
+    }
+  }, [props]);
   const onSubmit = (formValues) => {
     props.authenticate(formValues);
   };
-  console.log(props.info);
+
   return (
     <div className="login">
       <div className="illustration">
-        <img src={rocket_star} />
+        <img src={rocket_star} alt="rocket" />
         <div className="summary">{props.info.summary}</div>
       </div>
       <div className="form-section">

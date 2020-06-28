@@ -1,5 +1,5 @@
 import React from "react";
-import { reduxForm, Field, formValues } from "redux-form";
+import { reduxForm, Field } from "redux-form";
 import "../scss/form.scss";
 
 const LoginForm = (props) => {

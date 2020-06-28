@@ -1,15 +1,13 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { connect } from "react-redux";
 import { fetchLandingPads } from "../../actions";
 import "../../scss/cardPages.scss";
 import CardHOC from "../CardHOC";
 
 const LandingPad = (props) => {
-  useEffect(() => {
-    if (!props.items.length) {
-      props.fetchLandingPads();
-    }
-  }, []);
+  if (!props.items.length) {
+    props.fetchLandingPads();
+  }
 
   return (
     <React.Fragment>
@@ -19,7 +17,6 @@ const LandingPad = (props) => {
 };
 
 const renderComponents = (items) => {
-  console.log(items);
   const elements = items.map((item) => {
     const {
       full_name,

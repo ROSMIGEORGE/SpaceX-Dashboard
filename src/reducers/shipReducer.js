@@ -1,9 +1,11 @@
-import { SHIPS } from "./types";
+import { SHIPS, END_SESSION } from "./types";
 
-export default (state = {}, action) => {
+export default (state = [], action) => {
   switch (action.type) {
     case SHIPS:
       return action.payload;
+    case END_SESSION:
+      return [];
     default:
       return state;
   }

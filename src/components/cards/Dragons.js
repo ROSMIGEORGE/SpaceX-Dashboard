@@ -1,12 +1,12 @@
 import React from "react";
 import { connect } from "react-redux";
-import { fetchMissions } from "../../actions";
+import { fetchDragons } from "../../actions";
 import "../../scss/cardPages.scss";
 import CardHOC from "../CardHOC";
 
-const Missions = (props) => {
+const Dragons = (props) => {
   if (!props.items.length) {
-    props.fetchMissions();
+    props.fetchDragons();
   }
 
   return (
@@ -19,22 +19,33 @@ const Missions = (props) => {
 const renderComponents = (items) => {
   const elements = items.map((item) => {
     const {
-      mission_name,
-      mission_id,
-      payload_ids,
+      name,
+      id,
+      crew_capacity,
+      type,
       description,
+      dry_mass_kg,
       wikipedia,
+      orbit_duration_yr,
     } = item;
     return (
-      <div className="card" key={mission_id}>
-        <div className="sub-head">{mission_name}</div>
+      <div className="card" key={id}>
+        <div className="sub-head">{name}</div>
         <div className="list-item">
-          <span>MISSION ID:</span>
-          {mission_id}
+          <span>CREW CAPACITY :</span>
+          {crew_capacity}
         </div>
         <div className="list-item">
-          <span>PAYLOAD IDS:</span>
-          {payload_ids.join(" , ")}
+          <span>DRY MASS [KG] :</span>
+          {dry_mass_kg}
+        </div>
+        <div className="list-item">
+          <span>TYPE :</span>
+          {type}
+        </div>
+        <div className="list-item">
+          <span>ORBIT DURATION [YEAR] :</span>
+          {orbit_duration_yr}
         </div>
         <div>{description}</div>
         <div className="more">
@@ -47,9 +58,9 @@ const renderComponents = (items) => {
 };
 const mapStateToProps = (state) => {
   return {
-    items: state.missions,
+    items: state.dragons,
   };
 };
-export default CardHOC(connect(mapStateToProps, { fetchMissions })(Missions), {
-  title: "MISSION",
+export default CardHOC(connect(mapStateToProps, { fetchDragons })(Dragons), {
+  title: "DRAGONS",
 });

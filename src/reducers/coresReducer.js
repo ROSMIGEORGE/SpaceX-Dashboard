@@ -1,6 +1,6 @@
 import { CORES, END_SESSION } from "./types";
 
-export default (state = {}, action) => {
+export default (state = [], action) => {
   switch (action.type) {
     case CORES:
       return action.payload;

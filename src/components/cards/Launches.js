@@ -1,15 +1,13 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { connect } from "react-redux";
 import { fetchLaunches } from "../../actions";
 import "../../scss/cardPages.scss";
 import CardHOC from "../CardHOC";
 
 const Launches = (props) => {
-  useEffect(() => {
-    if (!props.items.length) {
-      props.fetchLaunches();
-    }
-  }, []);
+  if (!props.items.length) {
+    props.fetchLaunches();
+  }
 
   return (
     <React.Fragment>

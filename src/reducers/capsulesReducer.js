@@ -1,6 +1,6 @@
 import { CAPSULES, END_SESSION } from "./types";
 
-export default (state = {}, action) => {
+export default (state = [], action) => {
   switch (action.type) {
     case CAPSULES:
       return action.payload;
