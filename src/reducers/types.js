@@ -1,6 +1,7 @@
 export const START_SESSION = "START_SESSION";
 export const AUTH_FAILED = "AUTH_FAILED";
 export const END_SESSION = "END_SESSION";
+export const RESET = "RESET";
 export const CAPSULES = "CAPSULES";
 export const CORES = "CORES";
 export const DRAGONS = "DRAGONS";

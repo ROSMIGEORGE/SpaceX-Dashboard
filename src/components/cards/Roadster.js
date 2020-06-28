@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { fetchRoadster } from "../../actions";
 import "../../scss/cardPages.scss";
 import CardHOC from "../CardHOC";
+import Loader from "../Loader";
 
 const Roadster = (props) => {
   if (!props.items) {
@@ -11,7 +12,7 @@ const Roadster = (props) => {
 
   return (
     <React.Fragment>
-      {props.items ? renderComponents(props.items) : null}
+      {props.items ? renderComponents(props.items) : <Loader />}
     </React.Fragment>
   );
 };

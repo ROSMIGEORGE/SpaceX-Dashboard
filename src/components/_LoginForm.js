@@ -1,10 +1,23 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { CircularProgress } from "@material-ui/core";
 import { reduxForm, Field } from "redux-form";
 import "../scss/form.scss";
 
 const LoginForm = (props) => {
+  const [buttonText, setButtonText] = useState("Submit");
+
+  useEffect(() => {
+    if (props.errormsg) {
+      setButtonText("Submit");
+    }
+  }, [props.errormsg]);
+  const onSubmit = (formValues) => {
+    props.resetError();
+    setButtonText(<CircularProgress />);
+    props.onSubmit(formValues);
+  };
   return (
-    <form className="form" onSubmit={props.handleSubmit(props.onSubmit)}>
+    <form className="form" onSubmit={props.handleSubmit(onSubmit)}>
       <div>USER LOGIN</div>
 
       <Field
@@ -20,7 +33,7 @@ const LoginForm = (props) => {
         type="password"
       />
       <div>
-        <button type="submit">Submit</button>
+        <button type="submit">{buttonText}</button>
         <div className="error">{props.errormsg}</div>
       </div>
     </form>

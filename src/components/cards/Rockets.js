@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { fetchRockets } from "../../actions";
 import "../../scss/cardPages.scss";
 import CardHOC from "../CardHOC";
+import Loader from "../Loader";
 
 const Rockets = (props) => {
   if (!props.items.length) {
@@ -11,7 +12,7 @@ const Rockets = (props) => {
 
   return (
     <React.Fragment>
-      {props.items.length ? renderComponents(props.items) : null}
+      {props.items.length ? renderComponents(props.items) : <Loader />}
     </React.Fragment>
   );
 };

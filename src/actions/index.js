@@ -17,6 +17,7 @@ import {
   ROCKETS,
   ROADSTER,
   SHIPS,
+  RESET,
 } from "../reducers/types";
 
 export const authenticate = (formValues) => async (dispatch, getState) => {
@@ -50,6 +51,13 @@ export const endSession = () => {
   }, 0);
   return {
     type: END_SESSION,
+    payload: {},
+  };
+};
+
+export const reset = () => {
+  return {
+    type: RESET,
     payload: {},
   };
 };

@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { fetchLandingPads } from "../../actions";
 import "../../scss/cardPages.scss";
 import CardHOC from "../CardHOC";
+import Loader from "../Loader";
 
 const LandingPad = (props) => {
   if (!props.items.length) {
@@ -11,7 +12,7 @@ const LandingPad = (props) => {
 
   return (
     <React.Fragment>
-      {props.items.length ? renderComponents(props.items) : null}
+      {props.items.length ? renderComponents(props.items) : <Loader />}
     </React.Fragment>
   );
 };

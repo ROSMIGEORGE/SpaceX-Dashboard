@@ -1,12 +1,16 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import LoginForm from "./_LoginForm";
-import { authenticate, fetchInfo } from "../actions";
+import history from "../history";
+import { authenticate, fetchInfo, reset } from "../actions";
 import rocket_star from "../images/rocket-star.png";
 
 const LoginPage = (props) => {
   useEffect(() => {
-    if (!props.info) {
+    if (props.auth.isLoggedIn) {
+      history.push("/dashboard");
+    }
+    if (!props.info.summary) {
       props.fetchInfo();
     }
   }, [props]);
@@ -23,6 +27,7 @@ const LoginPage = (props) => {
       <div className="form-section">
         <LoginForm
           onSubmit={onSubmit}
+          resetError={props.reset}
           errormsg={props.auth.error ? props.auth.error : ""}
         />
       </div>
@@ -36,4 +41,6 @@ const mapStateToProps = (state) => {
     info: state.info,
   };
 };
-export default connect(mapStateToProps, { authenticate, fetchInfo })(LoginPage);
+export default connect(mapStateToProps, { authenticate, fetchInfo, reset })(
+  LoginPage
+);
