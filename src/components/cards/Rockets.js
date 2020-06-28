@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { fetchRockets } from "../../actions";
 import "../../scss/cardPages.scss";
 import CardHOC from "../general/_CardHOC";
-import Loader from "../Loader";
+import Loader from "../general/_Loader";
 
 const Rockets = (props) => {
   if (!props.items.length) {

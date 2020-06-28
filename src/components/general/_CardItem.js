@@ -2,6 +2,7 @@ import React from "react";
 import { ArrowDownward } from "@material-ui/icons";
 import hashHistory from "../../_helpers/hashHistory";
 
+//single card item
 const CardItem = ({ card }) => {
   return (
     <div className="card">

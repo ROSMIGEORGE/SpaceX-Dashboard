@@ -1,3 +1,5 @@
+//action types
+
 export const START_SESSION = "START_SESSION";
 export const AUTH_FAILED = "AUTH_FAILED";
 export const END_SESSION = "END_SESSION";
@@ -15,3 +17,4 @@ export const PAYLOAD = "PAYLOAD";
 export const ROCKETS = "ROCKETS";
 export const ROADSTER = "ROADSTER";
 export const SHIPS = "SHIPS";
+export const LAUNCH_NEXT = "LAUNCH_NEXT";

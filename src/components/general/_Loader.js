@@ -1,5 +1,5 @@
 import React from "react";
-import "../scss/loader.scss";
+import "../../scss/loader.scss";
 import { LinearProgress } from "@material-ui/core";
 
 const Loader = () => {

@@ -1,3 +1,4 @@
+//helper functions to load and save updated state to store
 export const loadState = () => {
   try {
     const serializedState = sessionStorage.getItem("state");

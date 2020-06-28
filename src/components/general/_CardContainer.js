@@ -3,6 +3,7 @@ import _ from "lodash";
 import "../../scss/cards.scss";
 import CardItem from "./_CardItem";
 
+//container component to hold cards
 const CardContainer = (props) => {
   const cards = _.map(props.cards);
   return (

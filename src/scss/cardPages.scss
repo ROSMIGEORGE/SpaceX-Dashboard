@@ -1,6 +1,7 @@
 @import "./general.scss";
 
 .modal {
+  z-index: 15;
   position: fixed;
   top: 0px;
   width: 100%;

@@ -3,6 +3,7 @@ import { Close } from "@material-ui/icons";
 import hashHistory from "../../_helpers/hashHistory";
 import "../../scss/cardPages.scss";
 
+//Higher Order Component that wraps card pages
 const CardHOC = (CardsSection, compProps) => {
   const Section = () => {
     const [classList, setClassList] = useState("modal");

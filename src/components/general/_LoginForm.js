@@ -3,6 +3,7 @@ import { CircularProgress } from "@material-ui/core";
 import { reduxForm, Field } from "redux-form";
 import "../../scss/form.scss";
 
+//login form made using redux form
 const LoginForm = (props) => {
   const [buttonText, setButtonText] = useState("Submit");
 

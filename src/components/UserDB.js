@@ -2,11 +2,15 @@ import React from "react";
 import { connect } from "react-redux";
 import InfoCard from "./general/_InfoCard";
 import CardContainer from "./general/_CardContainer";
+import Welcome from "./general/_Welcome";
 
 const UserDB = (props) => {
   return (
     <div className="user-db">
-      <InfoCard />
+      <div className="top-section">
+        <Welcome />
+        <InfoCard />
+      </div>
       <CardContainer cards={props.general} />
     </div>
   );

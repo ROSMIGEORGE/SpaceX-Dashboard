@@ -6,6 +6,7 @@ import LoginPage from "./LoginPage";
 import Dashboard from "./Dashboard";
 import Navbar from "./Navbar";
 
+//main component were page routing is defined
 const App = () => {
   return (
     <div className="app">

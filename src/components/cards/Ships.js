@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { fetchShips } from "../../actions";
 import "../../scss/cardPages.scss";
 import CardHOC from "../general/_CardHOC";
-import Loader from "../Loader";
+import Loader from "../general/_Loader";
 
 const Ships = (props) => {
   if (!props.items.length) {

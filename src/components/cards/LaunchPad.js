@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { fetchLaunchpads } from "../../actions";
 import "../../scss/cardPages.scss";
 import CardHOC from "../general/_CardHOC";
-import Loader from "../Loader";
+import Loader from "../general/_Loader";
 
 const LaunchPad = (props) => {
   if (!props.items.length) {

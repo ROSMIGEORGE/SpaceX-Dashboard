@@ -15,6 +15,7 @@ import payloadReducer from "./payloadReducer";
 import roadsterReducer from "./roadsterReducer";
 import rocketReducer from "./rocketReducer";
 import shipReducer from "./shipReducer";
+import nextlaunchReducer from "./nextlaunchReducer";
 
 export default combineReducers({
   form: formReducer,
@@ -33,4 +34,5 @@ export default combineReducers({
   roadsters: roadsterReducer,
   rockets: rocketReducer,
   ships: shipReducer,
+  nextLaunch: nextlaunchReducer,
 });

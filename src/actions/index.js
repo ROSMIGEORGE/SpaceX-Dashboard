@@ -18,8 +18,10 @@ import {
   ROADSTER,
   SHIPS,
   RESET,
+  LAUNCH_NEXT,
 } from "../_helpers/types";
 
+//action creator for authentication
 export const authenticate = (formValues) => async (dispatch, getState) => {
   const requestOptions = {
     method: "POST",
@@ -45,6 +47,7 @@ export const authenticate = (formValues) => async (dispatch, getState) => {
   }
 };
 
+//action creator for logout
 export const endSession = () => {
   setTimeout(() => {
     history.push("/");
@@ -55,6 +58,7 @@ export const endSession = () => {
   };
 };
 
+//reset action creator
 export const reset = () => {
   return {
     type: RESET,
@@ -62,6 +66,7 @@ export const reset = () => {
   };
 };
 
+//fetch capsule action creator
 export const fetchCapsules = () => async (dispatch, getState) => {
   const response = await spacexdata.get("/capsules");
   dispatch({
@@ -70,6 +75,7 @@ export const fetchCapsules = () => async (dispatch, getState) => {
   });
 };
 
+//fetch cores action creator
 export const fetchCores = () => async (dispatch, getState) => {
   const response = await spacexdata.get("/cores");
   dispatch({
@@ -78,6 +84,7 @@ export const fetchCores = () => async (dispatch, getState) => {
   });
 };
 
+//fetch dragons action creator
 export const fetchDragons = () => async (dispatch, getState) => {
   const response = await spacexdata.get("/dragons");
   dispatch({
@@ -86,6 +93,7 @@ export const fetchDragons = () => async (dispatch, getState) => {
   });
 };
 
+//fetch history action creator
 export const fetchHistory = () => async (dispatch, getState) => {
   const response = await spacexdata.get("/history");
   dispatch({
@@ -94,6 +102,7 @@ export const fetchHistory = () => async (dispatch, getState) => {
   });
 };
 
+//fetch info action creator
 export const fetchInfo = () => async (dispatch, getState) => {
   const response = await spacexdata.get("/info");
   dispatch({
@@ -102,6 +111,7 @@ export const fetchInfo = () => async (dispatch, getState) => {
   });
 };
 
+//fetch landing action creator
 export const fetchLandingPads = () => async (dispatch, getState) => {
   const response = await spacexdata.get("/landpads");
   dispatch({
@@ -110,6 +120,7 @@ export const fetchLandingPads = () => async (dispatch, getState) => {
   });
 };
 
+//fetch launches action creator
 export const fetchLaunches = () => async (dispatch, getState) => {
   const response = await spacexdata.get("/launches");
   dispatch({
@@ -118,6 +129,16 @@ export const fetchLaunches = () => async (dispatch, getState) => {
   });
 };
 
+//fetch next launches action creator
+export const fetchNextLaunches = () => async (dispatch, getState) => {
+  const response = await spacexdata.get("/launches/next");
+  dispatch({
+    type: LAUNCH_NEXT,
+    payload: response.data,
+  });
+};
+
+//fetch launch pad action creator
 export const fetchLaunchpads = () => async (dispatch, getState) => {
   const response = await spacexdata.get("/launchpads");
   dispatch({
@@ -126,6 +147,7 @@ export const fetchLaunchpads = () => async (dispatch, getState) => {
   });
 };
 
+//fetch missions action creator
 export const fetchMissions = () => async (dispatch, getState) => {
   const response = await spacexdata.get("/missions");
   dispatch({
@@ -134,6 +156,7 @@ export const fetchMissions = () => async (dispatch, getState) => {
   });
 };
 
+//fetch payloads action creator
 export const fetchPayloads = () => async (dispatch, getState) => {
   const response = await spacexdata.get("/payloads");
   dispatch({
@@ -142,6 +165,7 @@ export const fetchPayloads = () => async (dispatch, getState) => {
   });
 };
 
+//fetch rockets action creator
 export const fetchRockets = () => async (dispatch, getState) => {
   const response = await spacexdata.get("/rockets");
   dispatch({
@@ -150,6 +174,7 @@ export const fetchRockets = () => async (dispatch, getState) => {
   });
 };
 
+//fetch roadster action creator
 export const fetchRoadster = () => async (dispatch, getState) => {
   const response = await spacexdata.get("/roadster");
   dispatch({
@@ -158,6 +183,7 @@ export const fetchRoadster = () => async (dispatch, getState) => {
   });
 };
 
+//fetch ships action creator
 export const fetchShips = () => async (dispatch, getState) => {
   const response = await spacexdata.get("/ships");
   dispatch({

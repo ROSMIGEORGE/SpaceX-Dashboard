@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 
+//information card about company
 const InfoCard = (props) => {
   const {
     name,

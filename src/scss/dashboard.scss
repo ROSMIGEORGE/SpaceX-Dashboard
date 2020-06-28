@@ -3,12 +3,12 @@
 .dashboard {
   min-height: 100vh;
   padding-top: 50px;
-  box-sizing: border-box;
 }
 .user-db,
 .admin-db {
   box-sizing: border-box;
   padding: 20px;
+  overflow: auto;
 }
 .card-title {
   margin-top: 10px;
@@ -17,12 +17,14 @@
   box-shadow: $boxShadowOut;
   padding: 10px;
 }
-.info-card {
-  width: 100%;
+.info-card,
+.next-launch {
+  width: 78%;
   box-shadow: $boxShadowOut;
   box-sizing: border-box;
   padding: 18px;
   overflow: auto;
+  min-height: 285px;
   .company-info,
   .general-info {
     width: 49%;
@@ -54,10 +56,80 @@
     text-transform: uppercase;
   }
 }
-
+.top-section {
+  display: block;
+  overflow: auto;
+  margin: 20px 0px;
+  padding: 10px 3px;
+  box-sizing: border-box;
+}
+.welcome {
+  box-shadow: $boxShadowOut;
+  width: 20%;
+  min-height: 285px;
+  padding: 18px;
+  box-sizing: border-box;
+  float: left;
+  margin-right: 15px;
+  font-size: 35px;
+  position: relative;
+  z-index: 5;
+  filter: sepia(1);
+  .img-wrap {
+    position: absolute;
+    top: 2px;
+    left: 40px;
+    img {
+      height: 200px;
+      transform: rotate(90deg);
+    }
+  }
+  .msg {
+    position: absolute;
+    bottom: 10px;
+  }
+}
+.next-launch {
+  .inner {
+    margin-left: 90px;
+  }
+  .title {
+    font-weight: 700;
+    font-size: 30px;
+    margin-top: 10px;
+  }
+  .sub-title {
+    margin: 10px 0px;
+    font-size: 25px;
+  }
+  .item {
+    font-size: 15px;
+    margin-top: 5px;
+    span {
+      font-weight: 600;
+      width: 150px;
+      display: block;
+      float: left;
+      color: #ffffc9;
+    }
+  }
+}
 @media only screen and (max-width: 600px) {
   .info-card {
     font-size: 12px;
+  }
+  .info-card,
+  .welcome,
+  .next-launch {
+    width: 100%;
+  }
+  .welcome {
+    margin-bottom: 10px;
+  }
+  .next-launch {
+    .inner {
+      margin-left: unset;
+    }
   }
   .card {
     span:nth-child(1) {

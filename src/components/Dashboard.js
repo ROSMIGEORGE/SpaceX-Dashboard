@@ -19,6 +19,7 @@ import Rockets from "./cards/Rockets";
 import Roadster from "./cards/Roadster";
 import Ships from "./cards/Ships";
 
+//dashboard component with hash routing
 const Dashboard = (props) => {
   if (!props.auth.isLoggedIn) {
     history.push("/");

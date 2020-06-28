@@ -4,6 +4,11 @@ body {
   margin: 0px;
   background-color: $color_dark;
   font-family: $font_condensed;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 .app {
   font-family: $font;
@@ -12,6 +17,7 @@ body {
   box-sizing: border-box;
 }
 .nav {
+  z-index: 10;
   height: 50px;
   box-shadow: $boxShadowOut;
   box-sizing: border-box;
@@ -35,6 +41,7 @@ body {
     padding: 6px;
     position: relative;
     top: 10px;
+    cursor: pointer;
   }
   .username {
     margin-left: 40px;
