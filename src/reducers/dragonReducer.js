@@ -1,4 +1,4 @@
-import { DRAGONS, END_SESSION } from "./types";
+import { DRAGONS, END_SESSION } from "../_helpers/types";
 
 export default (state = [], action) => {
   switch (action.type) {

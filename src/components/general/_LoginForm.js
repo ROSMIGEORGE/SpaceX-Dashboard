@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { CircularProgress } from "@material-ui/core";
 import { reduxForm, Field } from "redux-form";
-import "../scss/form.scss";
+import "../../scss/form.scss";
 
 const LoginForm = (props) => {
   const [buttonText, setButtonText] = useState("Submit");

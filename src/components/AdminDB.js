@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import CardContainer from "./CardContainer";
+import CardContainer from "./general/_CardContainer";
 
 const AdminDB = (props) => {
   return (

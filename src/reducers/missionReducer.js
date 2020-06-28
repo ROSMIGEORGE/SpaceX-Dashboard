@@ -1,4 +1,4 @@
-import { MISSIONS, END_SESSION } from "./types";
+import { MISSIONS, END_SESSION } from "../_helpers/types";
 
 export default (state = [], action) => {
   switch (action.type) {

@@ -8,7 +8,7 @@ const Navbar = (props) => {
       <div className="logo">SPACEX</div>
       {props.auth.isLoggedIn ? (
         <div className="">
-          <div className="right username">{props.auth.username}</div>
+          <div className="right username">{props.auth.role}</div>
           <button className="logout right" onClick={props.endSession}>
             Logout
           </button>

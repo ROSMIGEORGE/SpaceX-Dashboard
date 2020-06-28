@@ -1,4 +1,4 @@
-import { ROADSTER, END_SESSION } from "./types";
+import { ROADSTER, END_SESSION } from "../_helpers/types";
 
 export default (state = null, action) => {
   switch (action.type) {

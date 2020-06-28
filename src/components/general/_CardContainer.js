@@ -1,7 +1,7 @@
 import React from "react";
 import _ from "lodash";
-import "../scss/cards.scss";
-import CardItem from "./CardItem";
+import "../../scss/cards.scss";
+import CardItem from "./_CardItem";
 
 const CardContainer = (props) => {
   const cards = _.map(props.cards);

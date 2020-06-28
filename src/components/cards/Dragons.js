@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { fetchDragons } from "../../actions";
 import "../../scss/cardPages.scss";
-import CardHOC from "../CardHOC";
+import CardHOC from "../general/_CardHOC";
 import Loader from "../Loader";
 
 const Dragons = (props) => {

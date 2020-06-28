@@ -1,5 +1,5 @@
 const Role = {
-  Admin: "Admin",
+  Scientist: "Scientist",
   User: "User",
 };
 
@@ -7,18 +7,18 @@ export function configureFakeBackend() {
   let users = [
     {
       id: 1,
-      username: "admin",
+      username: "elon",
       password: "admin",
-      firstName: "Admin",
-      lastName: "User",
-      role: Role.Admin,
+      firstName: "Elon",
+      lastName: "Musk",
+      role: Role.Scientist,
     },
     {
       id: 2,
-      username: "user",
+      username: "rosmi",
       password: "user",
-      firstName: "Normal",
-      lastName: "User",
+      firstName: "Rosmi",
+      lastName: "George",
       role: Role.User,
     },
   ];

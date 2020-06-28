@@ -1,4 +1,4 @@
-import { LAUNCHES, END_SESSION } from "./types";
+import { LAUNCHES, END_SESSION } from "../_helpers/types";
 
 export default (state = [], action) => {
   switch (action.type) {

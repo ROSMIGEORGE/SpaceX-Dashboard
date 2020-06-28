@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Close } from "@material-ui/icons";
-import hashHistory from "../_helpers/hashHistory";
-import "../scss/cardPages.scss";
+import hashHistory from "../../_helpers/hashHistory";
+import "../../scss/cardPages.scss";
 
 const CardHOC = (CardsSection, compProps) => {
   const Section = () => {

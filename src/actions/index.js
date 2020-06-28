@@ -18,7 +18,7 @@ import {
   ROADSTER,
   SHIPS,
   RESET,
-} from "../reducers/types";
+} from "../_helpers/types";
 
 export const authenticate = (formValues) => async (dispatch, getState) => {
   const requestOptions = {

@@ -1,4 +1,4 @@
-import { INFO } from "../reducers/types";
+import { INFO } from "../_helpers/types";
 
 export default (state = [], action) => {
   switch (action.type) {

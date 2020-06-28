@@ -26,7 +26,7 @@ const Dashboard = (props) => {
 
   return (
     <div className="dashboard">
-      {props.auth.role === "Admin" ? <AdminDB /> : <UserDB />}
+      {props.auth.role === "Scientist" ? <AdminDB /> : <UserDB />}
       <Router history={hashHistory} base>
         <Switch>
           <Route path="/history" exact component={HistoryPage} />

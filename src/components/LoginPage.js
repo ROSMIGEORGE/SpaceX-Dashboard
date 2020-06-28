@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
-import LoginForm from "./_LoginForm";
+import LoginForm from "./general/_LoginForm";
 import history from "../_helpers/history";
 import { authenticate, fetchInfo, reset } from "../actions";
 import rocket_star from "../images/rocket-star.png";

@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
-import InfoCard from "./InfoCard";
-import CardContainer from "./CardContainer";
+import InfoCard from "./general/_InfoCard";
+import CardContainer from "./general/_CardContainer";
 
 const UserDB = (props) => {
   return (

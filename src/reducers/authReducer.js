@@ -1,4 +1,9 @@
-import { START_SESSION, AUTH_FAILED, END_SESSION, RESET } from "./types";
+import {
+  START_SESSION,
+  AUTH_FAILED,
+  END_SESSION,
+  RESET,
+} from "../_helpers/types";
 
 const INIT_VALUES = { isLoggedIn: false, error: "" };
 export default (state = INIT_VALUES, action) => {
