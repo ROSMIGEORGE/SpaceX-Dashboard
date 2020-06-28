@@ -4,17 +4,16 @@ import InfoCard from "./InfoCard";
 import CardContainer from "./CardContainer";
 
 const UserDB = (props) => {
-  console.log(props);
   return (
     <div className="user-db">
       <InfoCard />
-      <CardContainer cards={props.userDB.cards} />
+      <CardContainer cards={props.general} />
     </div>
   );
 };
 
 const mapStateToProps = (state) => {
-  return { userDB: state.sections.userDB };
+  return { general: state.sections.general };
 };
 
 export default connect(mapStateToProps)(UserDB);

@@ -1,11 +1,4 @@
 const INITVALUE = {
-  general: {
-    history: { title: "History", path: "/history" },
-    launches: { title: "Launches", path: "/launches" },
-    lanchPad: { title: "Launch pad", path: "/launch-pad" },
-    LandingPad: { title: "Landing pad", path: "/landing-pad" },
-    missions: { title: "Missions", path: "/missions" },
-  },
   machines: {
     capsule: { title: "Capsule", path: "/capsule" },
     cores: { title: "Cores", path: "/cores" },
@@ -15,14 +8,12 @@ const INITVALUE = {
     roadster: { title: "Roadster", path: "/roadster" },
     ships: { title: "Ships", path: "/ships" },
   },
-  userDB: {
-    cards: {
-      history: { title: "History", path: "/history" },
-      missions: { title: "Missions", path: "/missions" },
-      launches: { title: "Launches", path: "/launches" },
-      lanchPad: { title: "Launch pad", path: "/launch-pad" },
-      LandingPad: { title: "Landing pad", path: "/landing-pad" },
-    },
+  general: {
+    history: { title: "History", path: "/history" },
+    missions: { title: "Missions", path: "/missions" },
+    launches: { title: "Launches", path: "/launches" },
+    lanchPad: { title: "Launch pad", path: "/launch-pad" },
+    LandingPad: { title: "Landing pad", path: "/landing-pad" },
   },
 };
 

@@ -6,11 +6,18 @@
   box-sizing: border-box;
 }
 
-.user-db {
+.user-db,
+.admin-db {
   box-sizing: border-box;
   padding: 20px;
 }
-
+.card-title {
+  margin-top: 10px;
+  font-weight: 700;
+  font-size: 25px;
+  box-shadow: $boxShadowOut;
+  padding: 10px;
+}
 .info-card {
   width: 100%;
   box-shadow: $boxShadowOut;

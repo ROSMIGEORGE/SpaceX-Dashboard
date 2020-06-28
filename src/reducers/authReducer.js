@@ -1,5 +1,4 @@
 import { START_SESSION, AUTH_FAILED, END_SESSION } from "./types";
-import { bindActionCreators } from "redux";
 
 const INIT_VALUES = { isLoggedIn: false };
 export default (state = INIT_VALUES, action) => {
