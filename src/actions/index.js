@@ -68,126 +68,182 @@ export const reset = () => {
 
 //fetch capsule action creator
 export const fetchCapsules = () => async (dispatch, getState) => {
-  const response = await spacexdata.get("/capsules");
-  dispatch({
-    type: CAPSULES,
-    payload: response.data,
-  });
+  try {
+    const response = await spacexdata.get("/capsules");
+    dispatch({
+      type: CAPSULES,
+      payload: response.data,
+    });
+  } catch (error) {
+    console.log(`Error ${error}`);
+  }
 };
 
 //fetch cores action creator
 export const fetchCores = () => async (dispatch, getState) => {
-  const response = await spacexdata.get("/cores");
-  dispatch({
-    type: CORES,
-    payload: response.data,
-  });
+  try {
+    const response = await spacexdata.get("/cores");
+    dispatch({
+      type: CORES,
+      payload: response.data,
+    });
+  } catch (error) {
+    console.log(`Error ${error}`);
+  }
 };
 
 //fetch dragons action creator
 export const fetchDragons = () => async (dispatch, getState) => {
-  const response = await spacexdata.get("/dragons");
-  dispatch({
-    type: DRAGONS,
-    payload: response.data,
-  });
+  try {
+    const response = await spacexdata.get("/dragons");
+    dispatch({
+      type: DRAGONS,
+      payload: response.data,
+    });
+  } catch (error) {
+    console.log(`Error ${error}`);
+  }
 };
 
 //fetch history action creator
 export const fetchHistory = () => async (dispatch, getState) => {
-  const response = await spacexdata.get("/history");
-  dispatch({
-    type: HISTORY,
-    payload: response.data,
-  });
+  try {
+    const response = await spacexdata.get("/history");
+    dispatch({
+      type: HISTORY,
+      payload: response.data,
+    });
+  } catch (error) {
+    console.log(`Error ${error}`);
+  }
 };
 
 //fetch info action creator
 export const fetchInfo = () => async (dispatch, getState) => {
-  const response = await spacexdata.get("/info");
-  dispatch({
-    type: INFO,
-    payload: response.data,
-  });
+  try {
+    const response = await spacexdata.get("/info");
+    dispatch({
+      type: INFO,
+      payload: response.data,
+    });
+  } catch (error) {
+    console.log(`Error ${error}`);
+  }
 };
 
 //fetch landing action creator
 export const fetchLandingPads = () => async (dispatch, getState) => {
-  const response = await spacexdata.get("/landpads");
-  dispatch({
-    type: LANDING_PADS,
-    payload: response.data,
-  });
+  try {
+    const response = await spacexdata.get("/landpads");
+    dispatch({
+      type: LANDING_PADS,
+      payload: response.data,
+    });
+  } catch (error) {
+    console.log(`Error ${error}`);
+  }
 };
 
 //fetch launches action creator
 export const fetchLaunches = () => async (dispatch, getState) => {
-  const response = await spacexdata.get("/launches");
-  dispatch({
-    type: LAUNCHES,
-    payload: response.data,
-  });
+  try {
+    const response = await spacexdata.get("/launches");
+    dispatch({
+      type: LAUNCHES,
+      payload: response.data,
+    });
+  } catch (error) {
+    console.log(`Error ${error}`);
+  }
 };
 
 //fetch next launches action creator
 export const fetchNextLaunches = () => async (dispatch, getState) => {
-  const response = await spacexdata.get("/launches/next");
-  dispatch({
-    type: LAUNCH_NEXT,
-    payload: response.data,
-  });
+  try {
+    const response = await spacexdata.get("/launches/next");
+    dispatch({
+      type: LAUNCH_NEXT,
+      payload: response.data,
+    });
+  } catch (error) {
+    console.log(`Error ${error}`);
+  }
 };
 
 //fetch launch pad action creator
 export const fetchLaunchpads = () => async (dispatch, getState) => {
-  const response = await spacexdata.get("/launchpads");
-  dispatch({
-    type: LAUNCH_PADS,
-    payload: response.data,
-  });
+  try {
+    const response = await spacexdata.get("/launchpads");
+    dispatch({
+      type: LAUNCH_PADS,
+      payload: response.data,
+    });
+  } catch (error) {
+    console.log(`Error ${error}`);
+  }
 };
 
 //fetch missions action creator
 export const fetchMissions = () => async (dispatch, getState) => {
-  const response = await spacexdata.get("/missions");
-  dispatch({
-    type: MISSIONS,
-    payload: response.data,
-  });
+  try {
+    const response = await spacexdata.get("/missions");
+    dispatch({
+      type: MISSIONS,
+      payload: response.data,
+    });
+  } catch (error) {
+    console.log(`Error ${error}`);
+  }
 };
 
 //fetch payloads action creator
 export const fetchPayloads = () => async (dispatch, getState) => {
-  const response = await spacexdata.get("/payloads");
-  dispatch({
-    type: PAYLOAD,
-    payload: response.data,
-  });
+  try {
+    const response = await spacexdata.get("/payloads");
+    dispatch({
+      type: PAYLOAD,
+      payload: response.data,
+    });
+  } catch (error) {
+    console.log(`Error ${error}`);
+  }
 };
 
 //fetch rockets action creator
 export const fetchRockets = () => async (dispatch, getState) => {
-  const response = await spacexdata.get("/rockets");
-  dispatch({
-    type: ROCKETS,
-    payload: response.data,
-  });
+  try {
+    const response = await spacexdata.get("/rockets");
+    dispatch({
+      type: ROCKETS,
+      payload: response.data,
+    });
+  } catch (error) {
+    console.log(`Error ${error}`);
+  }
 };
 
 //fetch roadster action creator
 export const fetchRoadster = () => async (dispatch, getState) => {
-  const response = await spacexdata.get("/roadster");
-  dispatch({
-    type: ROADSTER,
-    payload: response.data,
-  });
+  try {
+    const response = await spacexdata.get("/roadster");
+    dispatch({
+      type: ROADSTER,
+      payload: response.data,
+    });
+  } catch (error) {
+    console.log(`Error ${error}`);
+  }
 };
 
 //fetch ships action creator
 export const fetchShips = () => async (dispatch, getState) => {
-  const response = await spacexdata.get("/ships");
-  dispatch({
-    type: SHIPS,
-    payload: response.data,
-  });
+  try {
+    const response = await spacexdata.get("/ships");
+    dispatch({
+      type: SHIPS,
+      payload: response.data,
+    });
+  } catch (error) {
+    console.log(`Error ${error}`);
+  }
 };
