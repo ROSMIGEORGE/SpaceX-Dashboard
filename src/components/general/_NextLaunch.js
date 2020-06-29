@@ -1,12 +1,18 @@
 import React from "react";
 import { connect } from "react-redux";
 import { fetchNextLaunches } from "../../actions";
+import Loader from "./_LoaderBar";
 
 //information card about company
 const NextLaunch = (props) => {
   if (!props.next) {
     props.fetchNextLaunches();
-    return null;
+    return (
+      <div className="next-launch">
+        <div className="title">UPCOMING LAUNCH</div>
+        <Loader />
+      </div>
+    );
   }
   const {
     mission_name,

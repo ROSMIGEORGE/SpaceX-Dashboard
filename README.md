@@ -2,6 +2,11 @@
 
 SpaceX Dashboard created using apis from https://docs.spacexdata.com/
 
+Here in this project to roles are defined. credentials for this two roles are:
+
+1. Scientist- username: elon , password: admin
+2. User - username: rosmi, password: user
+
 ### Libraries used
 
 1. "axios": "^0.19.2"
