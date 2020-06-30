@@ -53,7 +53,9 @@ const renderComponents = (item) => {
       </div>
       <div>{details}</div>
       <div className="more">
-        <a href={wikipedia}>More Details</a>
+        <a target="_blank" href={wikipedia}>
+          More Details
+        </a>
       </div>
     </div>
   );
